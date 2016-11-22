@@ -18,4 +18,8 @@ public class MainActivity extends AppCompatActivity {
         int i = 2;
     }
 
+    private void test3(){
+        int i = 3;
+    }
+
 }
