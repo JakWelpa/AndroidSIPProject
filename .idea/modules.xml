@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AndroidSIPProject.iml" filepath="$PROJECT_DIR$/AndroidSIPProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android-sip-stack/android-sip-stack.iml" filepath="$PROJECT_DIR$/android-sip-stack/android-sip-stack.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/log4j-1.2.15/log4j-1.2.15.iml" filepath="$PROJECT_DIR$/log4j-1.2.15/log4j-1.2.15.iml" />
     </modules>
   </component>
 </project>
