@@ -16,13 +16,15 @@
         android:text="Login:"
         android:id="@+id/textViewLogin"
         android:layout_alignBottom="@+id/editTextLogin"
-        android:layout_alignEnd="@+id/textViewHaslo" />
+        android:layout_alignEnd="@+id/textViewHaslo"
+        android:layout_alignRight="@+id/textViewHaslo" />
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/editTextLogin"
         android:layout_alignParentTop="true"
-        android:layout_toEndOf="@+id/textViewDomena" />
+        android:layout_toEndOf="@+id/textViewDomena"
+        android:layout_toRightOf="@+id/textViewDomena" />
 
 
 
@@ -33,13 +35,15 @@
         android:id="@+id/textViewHaslo"
         android:layout_marginTop="23dp"
         android:layout_below="@+id/editTextLogin"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true" />
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/editTextHaslo"
         android:layout_below="@+id/textViewLogin"
-        android:layout_alignStart="@+id/editTextLogin" />
+        android:layout_alignStart="@+id/editTextLogin"
+        android:layout_alignLeft="@+id/editTextLogin" />
 
 
 
@@ -50,13 +54,15 @@
         android:id="@+id/textViewDomena"
         android:layout_marginTop="17dp"
         android:layout_below="@+id/editTextHaslo"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true" />
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/editTextDomena"
         android:layout_below="@+id/editTextHaslo"
-        android:layout_toEndOf="@+id/textViewDomena" />
+        android:layout_toEndOf="@+id/textViewDomena"
+        android:layout_toRightOf="@+id/textViewDomena" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -64,14 +70,16 @@
         android:text="Port:"
         android:id="@+id/textViewPort"
         android:layout_alignBottom="@+id/editText4"
-        android:layout_alignStart="@+id/textViewLogin" />
+        android:layout_alignStart="@+id/textViewLogin"
+        android:layout_alignLeft="@+id/textViewLogin" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/editText4"
         android:layout_below="@+id/editTextDomena"
-        android:layout_alignStart="@+id/editTextDomena" />
+        android:layout_alignStart="@+id/editTextDomena"
+        android:layout_alignLeft="@+id/editTextDomena" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -80,7 +88,8 @@
         android:id="@+id/textViewKomunikat"
         android:layout_alignBaseline="@+id/editTextDomena"
         android:layout_alignBottom="@+id/editTextDomena"
-        android:layout_alignEnd="@+id/button" />
+        android:layout_alignEnd="@+id/button"
+        android:layout_alignRight="@+id/button" />
 
     <Button
         android:layout_width="wrap_content"
@@ -88,7 +97,8 @@
         android:text="REJESTRUJ"
         android:id="@+id/button"
         android:layout_alignTop="@+id/textViewLogin"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -97,7 +107,8 @@
         android:id="@+id/buttonZadzwon"
         android:layout_below="@+id/textViewPort"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="89dp" />
+        android:layout_marginTop="89dp"
+        android:layout_alignParentLeft="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -105,7 +116,8 @@
         android:text="Rozlacz"
         android:id="@+id/buttonRozlacz"
         android:layout_alignTop="@+id/buttonZadzwon"
-        android:layout_alignStart="@+id/button" />
+        android:layout_alignStart="@+id/button"
+        android:layout_alignLeft="@+id/button" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -113,14 +125,18 @@
         android:text="Zadzwon do : "
         android:id="@+id/textView"
         android:layout_centerVertical="true"
-        android:layout_alignStart="@+id/textViewPort" />
+        android:layout_below="@+id/textViewPort"
+        android:layout_alignStart="@+id/textViewPort"
+        android:layout_alignLeft="@+id/textViewPort" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/editText"
+        android:layout_below="@id/editText4"
         android:layout_above="@+id/buttonRozlacz"
-        android:layout_toEndOf="@+id/buttonZadzwon" />
+        android:layout_toEndOf="@+id/buttonZadzwon"
+        android:layout_toRightOf="@+id/buttonZadzwon" />
 
 
 </RelativeLayout>
