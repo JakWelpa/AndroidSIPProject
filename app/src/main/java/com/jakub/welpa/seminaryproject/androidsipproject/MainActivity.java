@@ -10,8 +10,8 @@ import android.net.sip.SipProfile;
 import android.net.sip.SipRegistrationListener;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity{
         callButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                address = ((EditText)findViewById(R.id.editText)).getText().toString();
+                address = ((EditText)findViewById(R.id.addressEditText)).getText().toString();
                 callSomeone();
             }
         });
@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity{
         loginEditText = (EditText)findViewById(R.id.editTextLogin);
         passwordEditText = (EditText)findViewById(R.id.editTextHaslo);
         domainEditText = (EditText)findViewById(R.id.editTextDomena);
-        portEditText = (EditText)findViewById(R.id.editText4);
+        portEditText = (EditText)findViewById(R.id.editTextPort);
 
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
@@ -116,10 +116,10 @@ public class MainActivity extends AppCompatActivity{
             closeProfile();
         }
 
-        username = "smutek";//loginEditText.getText().toString();
-        domain ="iptel.org"; //domainEditText.getText().toString();
-        password = "jakiekolwiek123";//passwordEditText.getText().toString();
-        port = 5060;//Integer.parseInt(portEditText.getText().toString());
+        username = loginEditText.getText().toString(); //smutek
+        domain = domainEditText.getText().toString(); //iptel.org
+        password = passwordEditText.getText().toString(); //jakiekolwiek123
+        port = Integer.parseInt(portEditText.getText().toString()); //5060
 
         try{
             SipProfile.Builder builder = new SipProfile.Builder(username, domain);
