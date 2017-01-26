@@ -17,6 +17,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+/**
+ * Main Activity is setting up user settings
+ */
 public class MainActivity extends AppCompatActivity{
 
     private String address;
@@ -39,6 +42,10 @@ public class MainActivity extends AppCompatActivity{
     private EditText domainEditText;
     private EditText portEditText;
 
+    /**
+     * onCreate Method is backend of the app layout
+     * @param savedInstanceState
+     */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -85,12 +92,19 @@ public class MainActivity extends AppCompatActivity{
         registerReceiver(callListener, intentFilter);
 
     }
+
+    /**
+     * OnStart initialize user
+     */
     @Override
     public void onStart(){
         super.onStart();
         initializeSipManager();
     }
 
+    /**
+     * OnDestroy is Hanging up the connection
+     */
     @Override
     public void onDestroy() {
         super.onDestroy();
@@ -105,12 +119,18 @@ public class MainActivity extends AppCompatActivity{
         }
     }
 
+    /**
+     * initializeSipManager - is initializing up sip manager
+     */
     private void initializeSipManager() {
         if (manager == null) {
             manager = SipManager.newInstance(this);
         }
     }
 
+    /**
+     * InitilizeProfile - is setting up users profile
+     */
     private void initializeProfile() {
         if(profile != null){
             closeProfile();
@@ -154,6 +174,9 @@ public class MainActivity extends AppCompatActivity{
         }
     }
 
+    /**
+     * closeProfile - is closing actual user profile
+     */
     private void closeProfile(){
         try{
             if(profile != null){
@@ -164,6 +187,9 @@ public class MainActivity extends AppCompatActivity{
         }
     }
 
+    /**
+     * CallSomeone - starting protocol mechanism
+     */
     private void callSomeone(){
         setDispatch(address);
 
@@ -188,6 +214,10 @@ public class MainActivity extends AppCompatActivity{
         }
     }
 
+    /**
+     * setDispatch - is setting up communication on screen
+     * @param message
+     */
     private void setDispatch(final String message){
         this.runOnUiThread(new Runnable() {
             @Override
@@ -198,6 +228,10 @@ public class MainActivity extends AppCompatActivity{
         });
     }
 
+    /**
+     * updateCallStatus - is updating call status
+     * @param currentCall
+     */
     public void updateCallStatus(SipAudioCall currentCall){
         if((audioCall!= null) && audioCall.isInCall()){
             try{

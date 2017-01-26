@@ -7,8 +7,16 @@ import android.content.Intent;
 import android.net.sip.SipAudioCall;
 import android.net.sip.SipProfile;
 
+/**
+ * CallListener manages the connection
+ */
 public class CallListener extends BroadcastReceiver{
 
+    /**
+     * onReceive - create conversation
+     * @param context
+     * @param intent
+     */
     @Override
     public void onReceive(Context context, Intent intent) {
         SipAudioCall calling = null;
